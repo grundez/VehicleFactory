@@ -1,8 +1,16 @@
-﻿// TransportProject.h : включаемый файл для стандартных системных включаемых файлов
-// или включаемые файлы для конкретного проекта.
-
-#pragma once
-
+﻿#pragma once
 #include <iostream>
+#include "Transport.h"
 
-// TODO: установите здесь ссылки на дополнительные заголовки, требующиеся для программы.
+class TransportFactory {
+public:
+	enum class TransportType {
+		MOTORCYCLE = 0,
+		SCOOTER = 1,
+		AUTOMOBILE = 2,
+		AUTOBUS = 3
+	};
+
+	static std::unique_ptr<Transport> crateTransport(TransportType type);
+	
+};
