@@ -11,19 +11,19 @@ cd VehicleFactory
 ### Сборка
 **Для Windows:**
 ```cmd
-chmod +x build.sh
-./build.sh
+build.bat
 ```
 **Для Linux/Mac**
 ```cmd
-build.bat
+chmod +x build.sh
+./build.sh
 ```
 
 ---
 ### Работа с программой
 
 
-Программа принимает на вход числа в диапазоне 0-3:  
+Программа принимает на вход числа в диапазоне 0-3 и выводит информацию по транспортному средству:  
 0 - Мотоцикл  
 1 - Самокат  
 2 - Автомобиль  
@@ -37,5 +37,5 @@ build\Release\TransportProject.exe <аргументы>
 
 **Linux/Mac**
 ```cmd
-./build/TransportProject <аргументы>
+./build/TransportProject/TransportProject <аргументы>
 ```
