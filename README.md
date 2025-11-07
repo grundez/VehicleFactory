@@ -32,7 +32,7 @@ chmod +x build.sh
 
 **Windows**
 ```cmd
-build\Release\TransportProject.exe <аргументы>
+.\TransportProject\Release\TransportProject.exe <аргументы>
 ```
 
 **Linux/Mac**
