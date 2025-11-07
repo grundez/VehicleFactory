@@ -1,17 +1,33 @@
-#include "Automobile.h"
-#include "Scooter.h"
+#include "TransportFactory.h"
+#include <memory>
 #include <iostream>
 
 
 int main(int argc, char* argv[]) {
-
+	
 	// TODO realize parsing arguments and process them by fabric class to display info
 
-	std::unique_ptr<Transport> someAutomobile = std::make_unique<Automobile>(4, 120, "Купе");
-	someAutomobile->printInfo();
+	if (argc == 1) {
+		std::cout << "Введите числа для получения информации о конкретном транспорте: " << std::endl <<
+			"1: Мотоцикл\n2: Самокат\n3: Автомобиль\n4: Автобус" << std::endl <<
+			"Шаблон команды: TransportProject <тип транспортного средства>";
+		return 0;
+	}
 
-	std::unique_ptr<Transport> someScooter = std::make_unique<Scooter>(30);
-	someScooter->printInfo();
+	for (size_t i = 1; i < argc; ++i) {
+		try {
+			std::cout << "Аргумент " << i << "(" << argv[i] << "):" << std::endl;
+			int typeIdx = std::stoi(argv[i]);
+			auto transportType = static_cast<TransportFactory::TransportType>(typeIdx);
+			auto vehicle = TransportFactory::crateTransport(transportType);
+
+			if(vehicle) vehicle->printInfo();
+			std::cout << std::endl;
+		}
+		catch (const std::exception& e) {
+			std::cerr << "Ошибка при создании транспорта типа " << argv[i] << ": " << e.what() << std::endl;
+		}
+	}
 
 	return 0;
 }

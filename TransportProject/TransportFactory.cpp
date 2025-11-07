@@ -1,3 +1,18 @@
 ﻿#include "TransportFactory.h"
 
-// TODO realization factory method: build vehicles dependes on type of transport
+std::unique_ptr<Transport> TransportFactory::crateTransport(TransportType type)
+{
+	switch (type) {
+		case TransportType::SCOOTER:
+			return std::make_unique<Scooter>(30, 1, 2, true);
+		case TransportType::MOTORCYCLE:
+			return std::make_unique<Motorcycle>(150, 1);
+		case TransportType::AUTOMOBILE:
+			return std::make_unique<Automobile>(2, 200, "Купе");
+		case TransportType::AUTOBUS:
+			return std::make_unique<Autobus>(35, 100);
+		default: 
+			std::cout << "Неизвестный тип транспорта" << std::endl;
+			return nullptr;
+	}
+}
