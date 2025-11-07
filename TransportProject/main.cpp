@@ -2,11 +2,8 @@
 #include <memory>
 #include <iostream>
 
-
 int main(int argc, char* argv[]) {
 	
-	// TODO realize parsing arguments and process them by fabric class to display info
-
 	if (argc == 1) {
 		std::cout << "Введите числа для получения информации о конкретном транспорте: " << std::endl <<
 			"1: Мотоцикл\n2: Самокат\n3: Автомобиль\n4: Автобус" << std::endl <<
