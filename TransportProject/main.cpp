@@ -13,7 +13,7 @@ int main(int argc, char* argv[]) {
 
 	for (size_t i = 1; i < argc; ++i) {
 		try {
-			std::cout << "Аргумент " << i << "(" << argv[i] << "):" << std::endl;
+			std::cout << "Argument " << i << "(" << argv[i] << "):" << std::endl;
 			int typeIdx = std::stoi(argv[i]);
 			auto transportType = static_cast<TransportFactory::TransportType>(typeIdx);
 			auto vehicle = TransportFactory::crateTransport(transportType);
@@ -22,7 +22,7 @@ int main(int argc, char* argv[]) {
 			std::cout << std::endl;
 		}
 		catch (const std::exception& e) {
-			std::cerr << "Ошибка при создании транспорта типа " << argv[i] << ": " << e.what() << std::endl;
+			std::cerr << "Error to create vehicle type " << argv[i] << ": " << e.what() << std::endl;
 		}
 	}
 
