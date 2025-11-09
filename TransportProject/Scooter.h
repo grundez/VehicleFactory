@@ -7,7 +7,7 @@ private:
 
 public:
 	Scooter(size_t maxVelocity, size_t capacity = 1, size_t wheelsCount = 2, bool electric = false) :
-		Transport("Самокат", capacity, wheelsCount, maxVelocity), _isElectric(electric) {
+		Transport("Scooter", capacity, wheelsCount, maxVelocity), _isElectric(electric) {
 	}
 
 	void printInfo() const override;

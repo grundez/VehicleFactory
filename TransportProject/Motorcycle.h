@@ -5,7 +5,7 @@ class Motorcycle : public Transport {
 
 public:
 	Motorcycle(size_t maxVelocity, size_t capacity = 2, size_t wheelsCount = 2) :
-		Transport("Мотоцикл", capacity, wheelsCount, maxVelocity) {
+		Transport("Motorcycle", capacity, wheelsCount, maxVelocity) {
 	}
 
 	void printInfo() const override;

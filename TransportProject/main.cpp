@@ -5,9 +5,9 @@
 int main(int argc, char* argv[]) {
 	
 	if (argc == 1) {
-		std::cout << "Введите числа для получения информации о конкретном транспорте: " << std::endl <<
-			"1: Мотоцикл\n2: Самокат\n3: Автомобиль\n4: Автобус" << std::endl <<
-			"Шаблон команды: TransportProject <тип транспортного средства>";
+		std::cout << "Put numbers to get info about vehicles: " << std::endl <<
+			"1: Motorcycle\n2: Scooter\n3: Automobile\n4: Autobus" << std::endl <<
+			"command reference: TransportProject <vehicle type>";
 		return 0;
 	}
 

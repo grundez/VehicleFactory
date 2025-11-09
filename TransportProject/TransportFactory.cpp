@@ -8,11 +8,11 @@ std::unique_ptr<Transport> TransportFactory::crateTransport(TransportType type)
 		case TransportType::MOTORCYCLE:
 			return std::make_unique<Motorcycle>(150, 1);
 		case TransportType::AUTOMOBILE:
-			return std::make_unique<Automobile>(2, 200, "Купе");
+			return std::make_unique<Automobile>(2, 200, "Coupe");
 		case TransportType::AUTOBUS:
 			return std::make_unique<Autobus>(35, 100);
 		default: 
-			std::cout << "Неизвестный тип транспорта" << std::endl;
+			std::cout << "Unknown vehicle type" << std::endl;
 			return nullptr;
 	}
 }

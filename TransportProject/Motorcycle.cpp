@@ -2,8 +2,8 @@
 #include "Motorcycle.h"
 
 void Motorcycle::printInfo() const {
-	std::cout << "Наименования транспорта: " << getName() << std::endl <<
-		"Количество колес: " << getWheelsCount() << std::endl <<
-		"Максимальная скорость: " << getMaxVelocity() << "км/ч" << std::endl <<
-		"Максимальная количество пассажиров: " << getCapacity() << std::endl;
+	std::cout << "Transport name: " << getName() << std::endl <<
+		"Wheels count: " << getWheelsCount() << std::endl <<
+		"Max velocity: " << getMaxVelocity() << "km/h" << std::endl <<
+		"Max capacity: " << getCapacity() << std::endl;
 }
